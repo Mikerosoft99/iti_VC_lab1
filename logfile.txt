@@ -1,0 +1,112 @@
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (master)
+$ git branch dev
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (master)
+$ git branch test
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (master)
+$ git branch
+  dev
+* master
+  test
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (master)
+$ git checkout dev
+Switched to branch 'dev'
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (dev)
+$ touch divfile.txt
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (dev)
+$ git checkout test
+Switched to branch 'test'
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (test)
+$ touch testfile.txt
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (test)
+$ git add testfile.txt
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (test)
+$ git commit -m "testfile.txt branch test"
+[test 66fd95d] testfile.txt branch test
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 testfile.txt
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (test)
+$ git push origin test
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 299 bytes | 299.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'test' on GitHub by visiting:
+remote:      https://github.com/Mikerosoft99/iti_VC_lab1/pull/new/test
+remote:
+To https://github.com/Mikerosoft99/iti_VC_lab1.git
+ * [new branch]      test -> test
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (test)
+$ git checkout dev
+Switched to branch 'dev'
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (dev)
+$ git add divfile.txt
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (dev)
+$ git commit -m "added divfile.txt from dev"
+[dev 7f5335c] added divfile.txt from dev
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 divfile.txt
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (dev)
+$ git push origin dev
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 302 bytes | 302.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'dev' on GitHub by visiting:
+remote:      https://github.com/Mikerosoft99/iti_VC_lab1/pull/new/dev
+remote:
+To https://github.com/Mikerosoft99/iti_VC_lab1.git
+ * [new branch]      dev -> dev
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (dev)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (master)
+$ git merge dev
+Updating daf51a9..7f5335c
+Fast-forward
+ divfile.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 divfile.txt
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (master)
+$ git merge test
+Merge made by the 'ort' strategy.
+ testfile.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 testfile.txt
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (master)
+$ git push origin master
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 273 bytes | 273.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Mikerosoft99/iti_VC_lab1.git
+   daf51a9..63bcb4f  master -> master
+
+To Remove a branch locally we use ==> git branch -d branch_name
+To Remove it from remote repo we use ==> git push origin :branch_name

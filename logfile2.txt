@@ -1,0 +1,20 @@
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (master)
+$ git tag -a v1.7 -m "version 1.7"
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (master)
+$ git tag
+v1.7
+
+Mikerosoft@DESKTOP-UFADT9A MINGW64 /f/Files/ITI/Materials/Version Control/Version Control/Day 1/VC (master)
+$ git push origin v1.7
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 162 bytes | 162.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Mikerosoft99/iti_VC_lab1.git
+ * [new tag]         v1.7 -> v1.7
+
+
+To list tags we use ==> git tag
+To delete it locally we use ==> git tag -d (tag name)
+To delete it remotely we use ==> git push origin --delete (tag name)
